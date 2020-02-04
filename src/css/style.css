@@ -5,7 +5,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
     height: 100vh;
     overflow: hidden;
@@ -58,7 +58,6 @@ section {
     height: 100vh;
     padding-left: 20px;
     scroll-snap-align: center;
-    background: white;
     background: #44A08D;
     background: -webkit-linear-gradient(to right, #093637, #44A08D);
     background: linear-gradient(to right, #093637, #44A08D);
@@ -70,7 +69,7 @@ section .content {
 }
 
 section p {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 section h1 {
@@ -115,11 +114,6 @@ section#skills ul li {
     pointer-events: none;
 }
 
-@keyframes pulse {
-    to {
-      opacity: 1;
-    }
-  }
 
 i {
     font-size: 3.5rem;
