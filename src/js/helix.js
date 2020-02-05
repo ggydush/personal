@@ -20,6 +20,8 @@ var model
 loader.load('./src/assets/old/helix.gltf', function (gltf) {
     scene.add(gltf.scene);
     model = gltf.scene;
+    // Make DNA right-handed
+    model.applyMatrix(new THREE.Matrix4().makeScale(-1, 1, 1))
 }, undefined, function (error) {
     console.error(error);
 } );
