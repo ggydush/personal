@@ -22,75 +22,117 @@
 <body>
     <div class="container">
         <nav class="navbar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <h3 class="logo">GregGydush</h3>
+            <ul class="links">
+                <li><a class="link" href="#home">Home</a></li>
+                <li><a class="link" href="#skills">Skills</a></li>
+                <li><a class="link" href="#work">Work</a></li>
+                <li><a class="link" href="#contact">Contact</a></li>
             </ul>
         </nav>
         <section id="home">
             <div class="content">
-                <h1>Greg Gydush</h1>
-                <p>Computational Biologist</p>
-                <p>Software Engineer</p>
+                <h1>Hello, my name is<br> Greg Gydush</h1>
+                <p>I am a <span>Computational Biologist</span> and <span>Software Engineer</span></p>
             </div>
-
         </section>
         <section id="skills">
             <div class="content">
                 <h1><i class="fas fa-tools"></i> Skills</h1>
-                <div class="container">
-                    <div>
+                <div class="columns">
+                    <div class="column">
                         <p>Languages</p>
                         <ul>
                             <li class="pylibs">Python</li>
                             <li class="jslibs">JavaScript</li>
-                                <ul>
-                                    <li>ES6</li>
-                                    <li>Node.js</li>
-                                </ul>
                             <li>HTML</li>
                             <li>CSS</li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="column">
                         <p>Libraries</p>
-                        <div class="container">
-                            <ul class="pylibs">
-                                <li>Pandas</li>
-                                <li>Numpy</li>
-                                <li>Pysam</li>
-                                <li>Matplotlib/Seaborn</li>
-                                <li>Snakemake</li>
-                                <li>Flask</li>
-                            </ul>
-                            <ul class="jslibs">
-                                <li>Express</li>
-                                <li>D3</li>
-                                <li>React</li>
-                                <li>Mongoose</li>
-                                <li>Webpack</li>
-                            </ul>
-
+                        <div class="columns">
+                            <div class="column">
+                                <ul>
+                                    <li class="pylibs">Pandas</li>
+                                    <li class="pylibs">Numpy</li>
+                                    <li class="pylibs">Pysam</li>
+                                    <li class="pylibs">Matplotlib/Seaborn</li>
+                                    <li class="pylibs">Snakemake</li>
+                                    <li class="pylibs">Flask</li>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <ul>
+                                    <li class="jslibs">Express</li>
+                                    <li class="jslibs">D3</li>
+                                    <li class="jslibs">React</li>
+                                    <li class="jslibs">Mongoose</li>
+                                    <li class="jslibs">Webpack</li>
+                                </ul>
+                            </div>
                         </div>
-
                     </div>
-
                 </div>
-                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, aspernatur saepe explicabo aliquam sed officiis.</p> -->
             </div>
         </section>
         <section id="work">
             <div class="content">
                 <h1><i class="fas fa-laptop-code"></i> Work</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, aspernatur saepe explicabo aliquam sed officiis.</p>
+                <div class="columns">
+                    <div class="card">
+                        <p class="name">Variant Review</p>
+                        <p class="description"><strong>DESCRIPTION:</strong>
+                            Variant review system created on top of IGVJs for review
+                            of duplex consensus sequencing variants. Allows
+                            streamlined review of 1,000s of genomic variants from
+                            any number of samples. Read-level statistics are shown in
+                            tables and plots.
+                        </p>
+                        <div class="github-button"><a href="" target="_blank">Github</a></div>
+                    </div>
+                    <div class="card">
+                        <p class="name">Variant Review</p>
+                        <p class="description"><strong>DESCRIPTION:</strong>
+                            Variant review system created on top of IGVJs for review
+                            of duplex consensus sequencing variants. Allows
+                            streamlined review of 1,000s of genomic variants from
+                            any number of samples. Read-level statistics are shown in
+                            tables and plots.
+                        </p>
+                        <div class="github-button"><a href="" target="_blank">Github</a></div>
+                    </div>
+                    <div class="card">
+                        <p class="name">Variant Review</p>
+                        <p class="description"><strong>DESCRIPTION:</strong>
+                            Variant review system created on top of IGVJs for review
+                            of duplex consensus sequencing variants. Allows
+                            streamlined review of 1,000s of genomic variants from
+                            any number of samples. Read-level statistics are shown in
+                            tables and plots.
+                        </p>
+                        <div class="github-button"><a href="" target="_blank">Github</a></div>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="contact">
             <div class="content">
-                <h1><i class="far fa-envelope"></i> Contact</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, aspernatur saepe explicabo aliquam sed officiis.</p>
+                <h1>Contact</h1>
+                <div class="columns">
+                    <div class="columm">
+                        <p>Email</p>
+                        <a href="mailto:greggydush@gmail.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
+                    </div>
+                    <div class="column">
+                        <p>GitHub</p>
+                        <a href="https://github.com/ggydush" target="_blank"><i class="fab fa-github-square"></i></a>
+                    </div>
+                    <div class="column">
+                        <p>LinkedIn</p>
+                        <a href="https://www.linkedin.com/in/gregory-gydush/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
             </div>
         </section>
     </div>

@@ -15,13 +15,18 @@ renderer.setSize(width, height);
 container.appendChild(renderer.domElement);
 var model
 
+window.addEventListener('resize', () => {
+  const height = container.offsetHeight
+  renderer.setSize(width, height)
+})
+
 
 // Load model
-loader.load('./src/assets/old/helix.gltf', function (gltf) {
+loader.load('./src/assets/helix.gltf', function (gltf) {
     scene.add(gltf.scene);
     model = gltf.scene;
     // Make DNA right-handed
-    model.applyMatrix(new THREE.Matrix4().makeScale(-1, 1, 1))
+    model.applyMatrix4(new THREE.Matrix4().makeScale(-1, 1, 1))
 }, undefined, function (error) {
     console.error(error);
 } );
@@ -45,15 +50,15 @@ $('.container').scroll(function() {
 
 $(function() {
     $('.pylibs').hover(function() {
-      $('.pylibs').css('color', 'rgba(255, 255, 255, 0.468)');
+      $('.pylibs').css('color', ' rgb(121, 214, 171)');
     }, function() {
-      $('.pylibs').css('color', 'black');
+      $('.pylibs').css('color', '');
     });
   });
   $(function() {
     $('.jslibs').hover(function() {
-      $('.jslibs').css('color', 'rgba(255, 255, 255, 0.468)');
+      $('.jslibs').css('color', 'rgb(121, 214, 171)');
     }, function() {
-      $('.jslibs').css('color', 'black');
+      $('.jslibs').css('color', '');
     });
   });
