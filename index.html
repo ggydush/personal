@@ -12,6 +12,7 @@
     <script src="src/js/three.js"></script>
     <script src="src/js/GLTFLoader.js"></script>
     <script src="src/js/helix.js" defer></script>
+    <script src="src/js/main.js" defer></script>
     <link rel="stylesheet" href="src/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/42a8b75066.js" crossorigin="anonymous"></script>
@@ -20,6 +21,7 @@
 
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="container">
         <nav class="navbar">
             <h3 class="logo">GregGydush</h3>
@@ -78,42 +80,51 @@
         </section>
         <section id="work">
             <div class="content">
+                <video id="video" controls autoplay loop>
+                    <source src="src/assets/variantReview.mp4"
+                type="video/webm">
+                </video>
                 <h1><i class="fas fa-laptop-code"></i> Work</h1>
                 <div class="columns">
                     <div class="card">
-                        <p class="name">Variant Review</p>
-                        <p class="description"><strong>DESCRIPTION:</strong>
-                            Variant review system created on top of IGVJs for review
-                            of duplex consensus sequencing variants. Allows
-                            streamlined review of 1,000s of genomic variants from
-                            any number of samples. Read-level statistics are shown in
-                            tables and plots.
-                        </p>
-                        <div class="github-button"><a href="" target="_blank">Github</a></div>
+                        <div class="card-info">
+                            <p class="name">Variant Review</p>
+                            <p class="description"><strong>DESCRIPTION:</strong>
+                                Variant review system created on top of IGVJs for review
+                                of duplex consensus sequencing variants. Allows
+                                streamlined review of 1,000s of genomic variants from
+                                any number of samples. Read-level statistics are shown in
+                                tables and plots.
+                                <br><br>
+                                Source available after publication
+                            </p>
+                        </div>
+                        <div class="github-button"><a id="videoBtn" href="">Show Me</a></div>
                     </div>
                     <div class="card">
-                        <p class="name">Variant Review</p>
-                        <p class="description"><strong>DESCRIPTION:</strong>
-                            Variant review system created on top of IGVJs for review
-                            of duplex consensus sequencing variants. Allows
-                            streamlined review of 1,000s of genomic variants from
-                            any number of samples. Read-level statistics are shown in
-                            tables and plots.
+                        <div class="card-info">
+                            <p class="name">Probe Designer</p>
+                            <p class="description"><strong>DESCRIPTION:</strong>
+                            Allele-specific probe designer for MAESTRO using Biopython,
+                            BLAST, and custom thermodynamic scripts created using numpy.
+                            Used to design more than 10,000 probes and numerous panels.
+                            <br><br>
+                            Source available after publication
                         </p>
-                        <div class="github-button"><a href="" target="_blank">Github</a></div>
+                        </div>
+                        <div class="github-button disabled"><a href="#" target="_blank">GitHub Soon</a></div>
                     </div>
                     <div class="card">
-                        <p class="name">Variant Review</p>
-                        <p class="description"><strong>DESCRIPTION:</strong>
-                            Variant review system created on top of IGVJs for review
-                            of duplex consensus sequencing variants. Allows
-                            streamlined review of 1,000s of genomic variants from
-                            any number of samples. Read-level statistics are shown in
-                            tables and plots.
-                        </p>
-                        <div class="github-button"><a href="" target="_blank">Github</a></div>
+                        <div class="card-info">
+                            <p class="name">Game of 24</p>
+                            <p class="description"><strong>DESCRIPTION:</strong>
+                                Game of 24 created using React. Using addition, subtraction, multiplication, and division, create 24 from 4 given numbers. The 4 numbers are randomly generated and solutions are pre-computed using an algorithm in order to guarantee that every card has a solution.
+                            </p>
+                        </div>
+                        <div class="github-button"><a href="https://ggydush.github.io/gameOf24/" target="_blank">Show Me</a></div>
                     </div>
                 </div>
+
             </div>
         </section>
         <section id="contact">

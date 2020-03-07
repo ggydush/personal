@@ -56,6 +56,7 @@ body {
     height: 100vh;
     margin-right: 50px;
     pointer-events: none;
+    z-index: 0;
 }
 
 .container {
@@ -74,7 +75,7 @@ section {
     height: 100vh;
     scroll-snap-align: center;
     background: white;
-    background: #44A08D;
+    background: #44a08d;
     background: -webkit-linear-gradient(to right, #000000, rgb(13, 63, 53));
     background: linear-gradient(to right, #000000, rgb(14, 73, 61));
 }
@@ -106,7 +107,8 @@ i {
     text-align: left;
 }
 
-#home p, span {
+#home p,
+span {
     font-size: 1.5rem;
 }
 
@@ -138,60 +140,88 @@ i {
     flex: 1 1 auto;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
-    font-size: 1.5rem;
     padding: 20px 30px;
-    text-align: left;
     transition: ease 0.2s;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
 }
 .card .name {
-    text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
 }
 .card .description {
     font-size: 1rem;
 }
 #work .card:hover {
-    transform: scale(1.05);
-
+    transform: scale(1.03);
 }
 .github-button {
-    height: 30px;
-    width: 100px;
+    align-self: center;
+    padding: 0.5rem;
+    margin-top: 1rem;
     border: 1px solid white;
-    margin: 20px auto;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: ease 0.5s;
     border-radius: 5px;
 }
+.disabled {
+    pointer-events: none;
+    border: 1px solid grey;
+}
+.disabled * {
+    color: grey;
+}
 .github-button a {
     text-decoration: none;
+    top: 50%;
 }
 .github-button:hover {
     border: 1px solid rgb(121, 214, 171);
 }
 
+video {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 0.9;
+    z-index: 2;
+    display: none;
+}
+.show {
+    display: block;
+}
+
 @keyframes pulse {
-	0% {
-		transform: scale(0.90);
-	}
+    0% {
+        transform: scale(0.90);
+    }
 
-	70% {
-		transform: scale(1);
-	}
+    70% {
+        transform: scale(1);
+    }
 
-	100% {
-		transform: scale(0.90);
-	}
+    100% {
+        transform: scale(0.90);
+    }
 }
 
 #contact i {
     font-size: 8rem;
 }
-#contact i:hover{
+#contact i:hover {
     animation: pulse 1s infinite;
 }
 #contact p {
@@ -199,13 +229,11 @@ i {
     font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 1070px)  {
+@media only screen and (max-width: 1550px) {
     * {
         font-size: 16px;
     }
-}
-@media only screen and (max-width: 1040px)  {
-    * {
+    #work {
         font-size: 12px;
     }
     #model {
@@ -225,13 +253,13 @@ i {
     #work .content {
         overflow: auto;
     }
-
 }
 @media only screen and (max-width: 800px) {
     * {
-        font-size: 8px;
+        font-size: 10px;
     }
-    #home p, span {
+    #home p,
+    span {
         font-size: 2rem;
     }
     #model {
@@ -265,11 +293,5 @@ i {
     }
     #skills li {
         font-size: 1.5rem;
-    }
-    .card .description, .name, strong {
-        font-size: 1.8rem;
-    }
-    .github-button a {
-        font-size: 1.8rem;;
     }
 }
